@@ -1,0 +1,16 @@
+.contenedor{
+    padding: 5%;
+}
+h1{
+    margin-bottom: 20px;
+}
+
+p{
+    line-height: 30px;
+}
+
+.texto{
+    padding: 5%;
+    background-color: #e5e5e5;
+    width: 50%;
+}

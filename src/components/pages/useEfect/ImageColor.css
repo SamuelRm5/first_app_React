@@ -1,0 +1,15 @@
+.paisaje{
+    width: 50%;
+    filter: brightness(20%);
+}
+
+.darkImage{
+    filter: none;
+}
+
+.fondoMac{
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

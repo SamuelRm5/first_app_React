@@ -1,0 +1,124 @@
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover{
+    color: #2464b3;
+    transition: .3s;
+}
+
+#paisajeNoche{
+    display: none;
+}
+
+#paisajeDia{
+    display: block;
+}
+
+.links{
+    display: flex;
+    gap: 50px;
+}
+
+/* SWITCH */
+
+.fa-sun:before {
+    margin-left: -30px;
+}
+  
+.fa-moon:before {
+    margin-right: -30px;
+}
+
+.switch {
+    position: fixed;
+    top: 30px;
+    right: 0px;
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #dfdfdf;
+    top: -1px;
+    left: 0;
+    border: 1px solid #2464b3;
+    right: unset;
+    border-radius: 100px;
+    transition: 1s ease-in;
+    box-shadow: 0px 0px 2px 2px rgb(0 0 0 / 20%);
+}
+
+.switch.active {
+    background: orange;
+    color: #000;
+}
+.switch.active::after {
+    right: 0;
+    left: unset;
+    transition: 1s ease-in;
+
+}
+
+.switch span{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+/* EFECTO */
+
+body.dark {
+    transition: 1s;
+    background: #081724;
+}
+
+body.dark .header{
+    transition: 1s;
+    background-color: #1e405e;
+}
+
+body.dark .logo_section h1 {
+    transition: 1s;
+    color: #f3f3f3;
+}
+
+body.dark a{
+    transition: 1s;
+    color: #F1F1F1;
+}
+
+body.dark .counter_app {
+    transition: 1s;
+    background-color: #14293c;
+}
+
+body.dark p {
+    transition: 1s;
+    color: aliceblue;
+}
+
+body.dark .texto {
+    background-color: #14293c;
+}
+
+body.dark #paisajeDia{
+    display: none;
+}
+
+body.dark #paisajeNoche{
+    display: block;
+}

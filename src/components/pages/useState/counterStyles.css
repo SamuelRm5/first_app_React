@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #2464b3;
+}
+
+.spanCounter{
+    color: blueviolet;
+    margin-left: 25px;
+}
+
+.counter_app{
+    padding: 70px 50px;
+    border-radius: 10px;
+}
+
+select{
+    height: 20px;
+    margin: 0px 0px 20px 15px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+select:focus-visible{
+    border: 2px solid #2464b3;
+}
+
+option{
+    background-color: aliceblue;
+}

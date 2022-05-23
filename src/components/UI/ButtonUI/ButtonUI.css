@@ -1,0 +1,22 @@
+
+button{
+    border-radius: 4px;
+    height: 30px;
+    margin: 10px;
+    width: 55px;
+}
+
+.buttonAlice{
+    background-color: aliceblue;
+    border: 1px solid #2464b3;
+}
+
+.buttonGreen{
+    background-color: rgb(231 255 238);
+    border: 1px solid rgb(0 98 29);
+}
+
+.buttonRed{
+    background-color: #ffe0e0;
+    border: 1px solid #9f0000;
+}
