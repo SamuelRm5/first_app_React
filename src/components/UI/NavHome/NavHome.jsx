@@ -35,10 +35,9 @@ export const NavHome = () => {
     <>
         <div className='links'>
           <Link to={"/"}>Home</Link>
-          <Link to={"/aboutUs"}>About us</Link>
-          <Link to={"/contactUs"}>Contact us</Link>
           <Link to={"/counter"}>use State</Link>
-          <Link to={"/useEffect"}>use Effect</Link>
+          <Link to={"/rickapi"}>Rick</Link>
+
           <button onClick={handleOn} className="switch" id="switch">
             <span>
               <i className="fa-solid fa-sun"></i>

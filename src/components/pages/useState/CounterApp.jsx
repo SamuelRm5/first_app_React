@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { ButtonUI } from '../../UI/ButtonUI/ButtonUI';
-import { ImageColor } from '../useEfect/ImageColor';
+import { ImageColor } from '../ImageUseState/ImageColor';
 import "./counterStyles.css";
 
 export const CounterApp = () => {
@@ -39,6 +39,7 @@ export const CounterApp = () => {
                         <option value="10">10</option>
                     </select>
                     </p>
+                    <h2>Count 100 and look!</h2>  
                     
                     <hr />
                     <ButtonUI 
@@ -56,12 +57,8 @@ export const CounterApp = () => {
                         event={() => setCounter(0)}
                         text={`Reset`}
                     />
-                    {/* <button onClick={() => { setCounter(counter + tam) }}>+ {tam}</button>
-                    <button onClick={() => { setCounter(counter - tam) }}>- {tam}</button>
-                    <button onClick={() => { setCounter(0) }}>0</button> */}
                 </div>
             </div>
-            
             <ImageColor />
             
         </>

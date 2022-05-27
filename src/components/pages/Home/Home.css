@@ -14,3 +14,8 @@ p{
     background-color: #e5e5e5;
     width: 50%;
 }
+
+#buttonSearch{
+    width: 100px;
+    height: 35px;
+}
