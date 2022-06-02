@@ -49,11 +49,11 @@ export const RickMorty = () => {
 
         
           {
-            (rickUrl != undefined) ? 
+            (rickUrl !== undefined) ? 
               rickUrl.map( element => (
-                (element.status == 'Alive') ?
+                (element.status === 'Alive') ?
                     <RickCard key={element.id} vida={1} {...element}/>
-                  : ( element.status == 'Dead') ? <RickCard key={element.id} vida={2} {...element}/>
+                  : ( element.status === 'Dead') ? <RickCard key={element.id} vida={2} {...element}/>
                   : <RickCard key={element.id} vida={3} {...element}/>
             ))
             : <p>No hay resultados por '{searchText}'</p>

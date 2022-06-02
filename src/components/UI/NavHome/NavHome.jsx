@@ -37,6 +37,8 @@ export const NavHome = () => {
           <Link to={"/"}>Home</Link>
           <Link to={"/counter"}>use State</Link>
           <Link to={"/rickapi"}>Rick</Link>
+          <Link to={"/contact"}>Contact</Link>
+
 
           <button onClick={handleOn} className="switch" id="switch">
             <span>

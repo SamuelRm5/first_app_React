@@ -24,15 +24,15 @@ export const RickCard = ({
                         <div className="card-body">
                             <h5 className="card-title">{name}</h5>
                             {
-                                (vida == 1) ? <p className="status aliveColor"></p>
-                                    : (vida == 2) ? <p className="status deathColor"></p>
+                                (vida === 1) ? <p className="status aliveColor"></p>
+                                    : (vida === 2) ? <p className="status deathColor"></p>
                                     : <p className="status unknownColor"></p>
 
                             }
                             <p className="card-text genderImg">
                                 {
-                                    (gender == "Male") ? <BsGenderMale />
-                                        : (gender == "Female") ? <BsGenderFemale />
+                                    (gender === "Male") ? <BsGenderMale />
+                                        : (gender === "Female") ? <BsGenderFemale />
                                         : <BsGenderTrans />
                                 }
                             </p>
