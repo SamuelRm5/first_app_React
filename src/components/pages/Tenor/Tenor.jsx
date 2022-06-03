@@ -1,38 +1,70 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { TenorCard } from "./TenorCard";
 import './TenorStyle.css'
 
 
 export const Tenor = () => {
 
     // API Key YMIK1XMB1RMB
-    const api_key = "YMIK1XMB1RMB";
-    const urls = "https://g.tenor.com/v1/trending?key=YMIK1XMB1RMB"
+    const URL = "https://g.tenor.com/v1/"
 
-    const [url, setUrl] = useState([])
+    const [tenor_url, setTenor_url] = useState([])
+    const [query, setQuery] = useState("")
 
-    const apiData = ( url ) => {d
+    const apiData = ( url, aprob ) => {
+
+        const apiKey = "YMIK1XMB1RMB"
+
+        if ( aprob === true ) {
+            url = URL+`trending?key=${apiKey}&limit=4`
+        } else {
+            url = URL+`search?q=${query}&key=${apiKey}&limit=4`
+        }
         fetch( url )
         .then( resp => resp.json())
-        .then( data => setUrl(data.results))
+        .then( data => setTenor_url(data.results))
         .catch( err => console.log( err ))
     }
 
     useEffect(() => {
     
-        apiData(urls)
-      }, [urls])
+        apiData(URL, true)
+
+    }, [URL])
+
+    useEffect(() => {
+
+        apiData(URL, false)
+
+    }, [query])
+
+    const handleInputChange = ( { target } ) => {
+
+        setQuery(  target.value )
+    }
 
 
   return (
-    <div className="tenor_cont m-5">
-        {/* {
-            data.map( data => {
-                <div className="tenor_cards">
-                    <img src={data.url} />
-                </div>
-            })
-        } */}
+    <div className="m-5 pr_div_tenor">
+        <input 
+            type="text"
+            placeholder="Search"
+            onChange={handleInputChange}
+        />
+        <div className="tenor_cont">
+
+            {
+                tenor_url.map( (data) => (
+                    <TenorCard 
+                        key={data.id}
+                        gif={data.media}
+                        { ...data }
+                    />
+                ))
+            }
         
+        </div> 
     </div>
+   
   )
 }

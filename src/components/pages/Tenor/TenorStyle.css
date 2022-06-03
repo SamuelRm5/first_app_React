@@ -1,12 +1,32 @@
 .tenor_cont{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     height: 100vh;
 }
 
-.tenor_cards{
-    width: 250px;
+.pr_div_tenor input{
+    font-size: 20px;
+    margin-left: 20px;
     border: 1px solid grey;
-    height: 250px;
+    border-radius: 6px;
+    height: 50px;
+    width: 50vw;
+}
+
+
+.tenor_cards h1{
+    font-size: 20px;
+}
+
+.tenor_cards{
+    width: 300px;
+    border: 10px double grey;
+    height: 480px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.tenor_cards img{
+    width: 100%;
 }
